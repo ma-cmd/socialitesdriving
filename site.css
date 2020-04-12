@@ -4,6 +4,7 @@
     box-sizing: border-box;
 }
 
+
 .header{
     width:100%;
     height: 100vh;
@@ -21,46 +22,37 @@
 .header p {
     margin-bottom: 0;
 }
-.header:before{
-    content: "";
-    position: absolute;
-    top: 0%;
-    bottom: 0%;
-    left: 0;
-    right: 0;
-    opacity: .3;
-    z-index: -1;
-    'background: linear-gradient(to right,#1e5799 0%, #3ccdbb 0%, #16c9f6 100%);
+
+
+.navbar:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 0;
+  height: 0;
+  border-color: transparent white transparent transparent;
+  border-style: solid;
 }
 
-.navbar:before{
-    content: "";
-    position: absolute;
-    top: 0%;
-    bottom: 0%;
-    left: 0;
-    right: 0;
-    opacity: .3;
-    z-index: -1;
-    'background: linear-gradient(to right,#1e5799 0%, #3ccdbb 0%, #16c9f6 100%);
-}
 
 a{text-decoration: none;}
 .header-buttons a:hover{
     text-decoration: none;
     border-bottom: 2px solid #eb4034;
     box-shadow: 0 0 20px 0 rgba(0,0,0,0.3);
+    
 }
 
 li{list-style: none;}
 
 .nav-item a{
-    color:white!important;
+    color:yellow!important;
     font-weight: bold;
 }
 
 .navbar-brand{
-    color: white;
+    color: yellow!important;
     font-weight: bold;
 }
 
@@ -70,40 +62,69 @@ li{list-style: none;}
     color: white;
     text-align: center;
     position: relative;
+    z-index: -1;
     
 }
 
 .center-div{
-    width: 100%;
+    background-color: black;
+    border-radius: 50%;
+    width:25%;
     height: auto;
+    min-height: 50%;
     position: absolute;
-    top: 30%;
+    top: 40%;
     left: 50%;
-    opacity: 80%;
+    opacity: 70%;
     transform: translate(-50%,-50%);
     -ms-transform: translate(-50%,-50%);
     -webkit-transform: translate(-50%,-50%);
+    z-index: 1;
 }
 
+
+
 #socialites{
-margin-top: 0%;
+margin-top: 5%;
 font-size: 500%;
 margin-bottom: 0;
 font-family: Arial!important;
 color:yellow;
-z-index: 2;
+z-index: 1;
 text-shadow: 2px 2px black;
 opacity: 1;
 }
 
-@media (max-width: 600px) {
+@media only screen and (max-width: 600px) {
 #socialites{
 font-size: 300%;
 }
+    .center-div{
+        width: 100%;
+    }
 }
 
+@media only screen and (min-width: 768px){
+#socialites{
+font-size: 500%;
+}
+.center-div{
+    width: 70%;
+    left:50%;
+}
+}
+
+@media only screen and (min-width: 992px){
+    .center-div{
+    width: 25%;
+    left:50%;
+        min-width:500px;
+}
+}
+
+
 .center-div p {
-margin-top: 15%;
+margin-top: 30%;
 margin-bottom: 0;
 }
 
@@ -500,4 +521,10 @@ z-index: 1;
 .footer{
     background-color: #f25a49;
     color: white;
+}
+
+#logo{
+    width: 50px;
+    height: 50px;
+    margin-left: 10px;
 }
